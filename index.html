@@ -1,11 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RemodAR</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @media (min-width: 768px) {
+
+            iframe,
+            img {
+                height: 500px;
+                width: 500px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            figure {
+                margin: 0;
+            }
+
+            iframe,
+            img {
+                height: 80vw;
+                width: 80vw;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div style="position: relative; width: 100vw; height: 100vh;">
+        <img src="assets/remodar.jpg"
+            style="width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: -1;" />
+        <h1 style="position: absolute; top: 10%; left: 10%; right: 10%; color: white;">RemodAR</h1>
+        <h2 style="position: absolute; top: 30%; left: 10%; right: 10%; color: white;">Experience your dream remodeling
+            with AR to build your best home ever.</h2>
+    </div>
+
+    <main>
+        <h2>Our Mission</h2>
+        <p>
+            RemodAR lets homeowners experience their final remodeled home before the first hammer swings using Augmented
+            Reality.
+        </p>
+        <p>
+            Our AR technology projects your renovation plans into your actual space, allowing you to walk through,
+            interact
+            with, and refine every detail until it's perfect.
+        </p>
+
+        <h2>Development Blog</h2>
+
+        <h3>Milestone 2 (April 1 - 8, 2024)</h3>
+
+        <p>
+            The Meta Scene API is missing crucial features like loading room models.
+            https://communityforums.atmeta.com/t5/Unity-VR-Development/How-to-save-and-load-room-layouts-with-the-quest3/td-p/1095799
+
+            After inspecting the documentation closely, it seems that it's impossible load a room model programmatically
+            because "OVRSceneAnchors are created by the OVRSceneManager and cannot be created by the user".
+            https://developer.oculus.com/documentation/unity/unity-scene-use-scene-anchors/
+
+
+        </p>
+
+        <h3>Milestone 1 (March 25 - 31, 2024)</h3>
+
+        <h4>Choice of Technology</h4>
+        <p>
+            After careful consideration, we chose to develop RemodAR using AR on the Meta Quest 3 headset.
+            AR allows users to experience their unique remodeled space by physically walking through it, providing
+            a more immersive and realistic experience compared to VR, which often relies on fixed viewpoints or awkward
+            teleportation movement. The Meta Quest 3 headset's high-fidelity passthrough and wide field-of-view deliver
+            the level of immersion necessary for visualizing a remodeling project, surpassing the limitations of small
+            mobile device screens.
+        </p>
+        <h4>Testing the Water</h4>
+        <p>
+            As newcomers to the AR features of the Meta Quest platform, we began by downloading and building a demo game
+            called <a href="https://github.com/oculus-samples/Unity-Phanto">Phanto</a>, provided by Meta, on the Quest
+            Pro.
+            This game showcased several crucial AR features needed for our project, including passthrough, scene
+            recognition, and object placement. Although we successfully compiled and ran the game on the Quest Pro, we
+            discovered that it does not support the scene mesh API required for room scanning, scene recognition, and
+            object
+            placement. Moreover, the passthrough quality was unstable, grainy, and lacked color. These limitations made
+            it
+            clear that the Quest Pro could not deliver the immersive AR experience required forRemodAR.
+            As a result, we decided to purchase a Quest 3 to further explore its potential for our project.
+
+            The Quest 3 exceeded our expectations. The Phanto game worked seamlessly on the Quest 3, and we were
+            impressed
+            by the high precision of its room scanning capability. The device allowed us to place virtual weapons on any
+            physical surface with remarkable accuracy, and the enemies spawned at realistic, unoccupied locations within
+            the
+            room, enhancing the overall immersive experience.
+        </p>
+
+        <figure>
+            <iframe
+                src="https://customer-txd9t6nn5clphx9i.cloudflarestream.com/436d00c4083777bb02b3864469ac687c/iframe?poster=https%3A%2F%2Fcustomer-txd9t6nn5clphx9i.cloudflarestream.com%2F436d00c4083777bb02b3864469ac687c%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                loading="lazy" style="border: none"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowfullscreen="true"></iframe>
+            <figcaption>Video Demo of the Phanto game on Quest 3</figcaption>
+        </figure>
+
+        <h4>First Proof-of-Concept</h4>
+        <p>
+            Encouraged by the Quest 3's capabilities demonstrated in the Phanto game, we proceeded to follow the first
+            part
+            of a <a href="https://www.youtube.com/watch?v=b_1Xby35fSo">Meta Quest Scene API YouTube tutorial</a> to
+            implement the most basic features of home remodeling: changing floor tiles and painting walls. This initial
+            proof-of-concept allowed us to lay the foundation for our RemodAR application. The demo video below was
+            filmed
+            in an occupied room with furniture but we intend the experience to be taken place in a new, empty,
+            unfurnished
+            room where the customer can walk around more freely. In the coming week, we plan to expand on this by
+            enabling
+            users to select from a variety of floor tiles and wallpapers, as well as experiment with adding furniture to
+            the
+            virtual room.
+        </p>
+
+        <figure>
+            <iframe
+                src="https://customer-txd9t6nn5clphx9i.cloudflarestream.com/d96ccd9000bd107d560376fde2c461b8/iframe?poster=https%3A%2F%2Fcustomer-txd9t6nn5clphx9i.cloudflarestream.com%2Fd96ccd9000bd107d560376fde2c461b8%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                loading="lazy" style="border: none"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowfullscreen="true"></iframe>
+            <figcaption>Video Demo of Milestone 1 on Quest 3</figcaption>
+        </figure>
+    </main>
 </body>
+
 </html>
