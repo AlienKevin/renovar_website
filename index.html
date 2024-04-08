@@ -52,17 +52,29 @@
         </p>
 
         <h2>Business Model</h2>
+        <h3>Market opportunity</h3>
+        <p>
+            The U.S. residential remodeling market size was estimated at USD 527.36 billion in 2023 and
+            is projected to grow at a compound annual growth rate (CAGR) of 4.6% from 2024 to 2030. We will be
+            targeting the mid-to-high end customers who value the benefits of visualizing their remodeling projects in
+            detail before committing to the work. These customers are more likely to invest in technology that can save
+            them time, money, and stress in the long run as their remodeling projects are often highly personalized,
+            intricate, and costly.
+        </p>
         <h3>Income</h3>
         <p>
             We will not charge homeowner anything but will sell our service to designers who need a better way
-            of showcasing their design and gaining customer satisfaction. We will have two- tiered pricing model where
-            independent designers will be charged $50 a month and a team of less than 5 designers will be charged $200 a
+            of showcasing their design and gaining customer satisfaction. We will have two- tiered pricing model
+            where
+            independent designers will be charged $50 a month and a team of less than 5 designers will be charged
+            $200 a
             month for additional collaborative features.
         </p>
         <h3>Expenses</h3>
         <p>The main expanse is the cost for developing the software. There are two parts to the software: one
             is designer facing and need to integrate with existing design frameworks and the other one is homeowner
-            facing and need high-fidelity rendering for an appealing presentation. Our team also needs to get access to
+            facing and need high-fidelity rendering for an appealing presentation. Our team also needs to get access
+            to
             the latest headsets like Quest Pro and Vision Pro, which costs from $1,499 to $3,499. The team also
             needs pay for a license for the Unity game engine, which costs $2,040 per year per seat. Lastly, there
             is cost for setting up the company website, marketing, and general operation costs like rent.
@@ -138,31 +150,39 @@
 
         <p>
             The first two are relatively straightforward because we can treat just the scanned room as a virtual
-            environment. Raycasting, object placement, and controller input work the same way as in VR. However, we had
-            trouble with the third feature: showing real objects in the scene. After in-depth research, we found that
+            environment. Raycasting, object placement, and controller input work the same way as in VR. However, we
+            had
+            trouble with the third feature: showing real objects in the scene. After in-depth research, we found
+            that
             the Passthrough API provided by Meta currently only support
             very coarse
-            grained control like underlay vs overlay over the virtual scene. Real objects like furniture can be scanned
+            grained control like underlay vs overlay over the virtual scene. Real objects like furniture can be
+            scanned
             using the
             API. However, it turned out that turning on floor or wall texture overlay would directly cover the
             passthrough video feed, meaning that the overlays are not actually fit into the 3D environment like we
             thought before.
         </p>
         <p>
-            After watching all the Scene API YouTube tutorials we can find and searching on the Meta Community Forums,
+            After watching all the Scene API YouTube tutorials we can find and searching on the Meta Community
+            Forums,
             we
-            concluded that more API support is needed to support proper integration of passthrough and virtual objects.
+            concluded that more API support is needed to support proper integration of passthrough and virtual
+            objects.
             In fact, Meta
             is in the process of developing a <a
                 href="https://developer.oculus.com/documentation/unity/unity-depthapi/">Depth API</a>
-            which exposes real-time sensed environment depth to apps in the form of depth maps to complement the current
+            which exposes real-time sensed environment depth to apps in the form of depth maps to complement the
+            current
             Scene API. However, we have yet to figure out how the Depth API can be combined with Passthrough to show
             real objects
             alongside virtual ones and we think the complexity might be outside the scope of this project.
         <p>
-            Hence for the next week, we want to focus on a more actionable AR feature: adding a window to the room so
+            Hence for the next week, we want to focus on a more actionable AR feature: adding a window to the room
+            so
             that users can
-            peek through the virtual scene into their own backyard! This will be our first feature to expose the user to
+            peek through the virtual scene into their own backyard! This will be our first feature to expose the
+            user to
             both the real
             and the virtual world at the same time.
         </p>
@@ -173,29 +193,39 @@
         <p>
             After careful consideration, we chose to develop RemodAR using AR on the Meta Quest 3 headset.
             AR allows users to experience their unique remodeled space by physically walking through it, providing
-            a more immersive and realistic experience compared to VR, which often relies on fixed viewpoints or awkward
-            teleportation movement. The Meta Quest 3 headset's high-fidelity passthrough and wide field-of-view deliver
-            the level of immersion necessary for visualizing a remodeling project, surpassing the limitations of small
+            a more immersive and realistic experience compared to VR, which often relies on fixed viewpoints or
+            awkward
+            teleportation movement. The Meta Quest 3 headset's high-fidelity passthrough and wide field-of-view
+            deliver
+            the level of immersion necessary for visualizing a remodeling project, surpassing the limitations of
+            small
             mobile device screens.
         </p>
         <h4>Testing the Water</h4>
         <p>
-            As newcomers to the AR features of the Meta Quest platform, we began by downloading and building a demo game
-            called <a href="https://github.com/oculus-samples/Unity-Phanto">Phanto</a>, provided by Meta, on the Quest
+            As newcomers to the AR features of the Meta Quest platform, we began by downloading and building a demo
+            game
+            called <a href="https://github.com/oculus-samples/Unity-Phanto">Phanto</a>, provided by Meta, on the
+            Quest
             Pro.
             This game showcased several crucial AR features needed for our project, including passthrough, scene
-            recognition, and object placement. Although we successfully compiled and ran the game on the Quest Pro, we
-            discovered that it does not support the scene mesh API required for room scanning, scene recognition, and
+            recognition, and object placement. Although we successfully compiled and ran the game on the Quest Pro,
+            we
+            discovered that it does not support the scene mesh API required for room scanning, scene recognition,
+            and
             object
-            placement. Moreover, the passthrough quality was unstable, grainy, and lacked color. These limitations made
+            placement. Moreover, the passthrough quality was unstable, grainy, and lacked color. These limitations
+            made
             it
             clear that the Quest Pro could not deliver the immersive AR experience required forRemodAR.
             As a result, we decided to purchase a Quest 3 to further explore its potential for our project.
 
             The Quest 3 exceeded our expectations. The Phanto game worked seamlessly on the Quest 3, and we were
             impressed
-            by the high precision of its room scanning capability. The device allowed us to place virtual weapons on any
-            physical surface with remarkable accuracy, and the enemies spawned at realistic, unoccupied locations within
+            by the high precision of its room scanning capability. The device allowed us to place virtual weapons on
+            any
+            physical surface with remarkable accuracy, and the enemies spawned at realistic, unoccupied locations
+            within
             the
             room, enhancing the overall immersive experience.
         </p>
@@ -211,17 +241,20 @@
 
         <h4>First Proof-of-Concept</h4>
         <p>
-            Encouraged by the Quest 3's capabilities demonstrated in the Phanto game, we proceeded to follow the first
+            Encouraged by the Quest 3's capabilities demonstrated in the Phanto game, we proceeded to follow the
+            first
             part
             of a <a href="https://www.youtube.com/watch?v=b_1Xby35fSo">Meta Quest Scene API YouTube tutorial</a> to
-            implement the most basic features of home remodeling: changing floor tiles and painting walls. This initial
+            implement the most basic features of home remodeling: changing floor tiles and painting walls. This
+            initial
             proof-of-concept allowed us to lay the foundation for our RemodAR application. The demo video below was
             filmed
             in an occupied room with furniture but we intend the experience to be taken place in a new, empty,
             unfurnished
             room where the customer can walk around more freely. In the coming week, we plan to expand on this by
             enabling
-            users to select from a variety of floor tiles and wallpapers, as well as experiment with adding furniture to
+            users to select from a variety of floor tiles and wallpapers, as well as experiment with adding
+            furniture to
             the
             virtual room.
         </p>
