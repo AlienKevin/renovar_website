@@ -97,64 +97,67 @@
 
         <figure>
             <iframe
-                src="https://customer-txd9t6nn5clphx9i.cloudflarestream.com/11e8fdf55202095870e153be89a4bb42/iframe?loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-txd9t6nn5clphx9i.cloudflarestream.com%2F11e8fdf55202095870e153be89a4bb42%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                src="https://customer-txd9t6nn5clphx9i.cloudflarestream.com/3a5eade8e5fe2b9b192ec42dcc64759b/iframe?poster=https%3A%2F%2Fcustomer-txd9t6nn5clphx9i.cloudflarestream.com%2F3a5eade8e5fe2b9b192ec42dcc64759b%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
                 loading="lazy" style="border: none"
                 allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
                 allowfullscreen="true"></iframe>
             <figcaption>Video Demo of RemodAR on Quest 3</figcaption>
         </figure>
 
-        <h3>Challenges with Meta Presence API</h3>
-        <p>
-            The first two are relatively straightforward because we can treat just the scanned room as a virtual
-            environment. Raycasting, object placement, and controller input work the same way as in VR. However, we
-            had
-            trouble with the third feature: showing real objects in the scene. After in-depth research, we found
-            that
-            the Passthrough API provided by Meta currently only support
-            very coarse
-            grained control like underlay vs overlay over the virtual scene. Real objects like furniture can be
-            scanned
-            using the
-            API. However, it turned out that turning on floor or wall texture overlay would directly cover the
-            passthrough video feed, meaning that the overlays are not actually fit into the 3D environment like we
-            thought before.
-        </p>
-        <p>
-            After watching all the Scene API YouTube tutorials we can find and searching on the Meta Community
-            Forums,
-            we
-            concluded that more API support is needed to support proper integration of passthrough and virtual
-            objects.
-            In fact, Meta
-            is in the process of developing a <a
-                href="https://developer.oculus.com/documentation/unity/unity-depthapi/">Depth API</a>
-            which exposes real-time sensed environment depth to apps in the form of depth maps to complement the
-            current
-            Scene API. However, we have yet to figure out how the Depth API can be combined with Passthrough to show
-            real objects
-            alongside virtual ones and we think the complexity might be outside the scope of this project.
+        <h3>Challenges with Passthrough</h3>
+        <p> The first two features, raycasting and object placement, are relatively straightforward because we can treat
+            the scanned room as a virtual environment. These features work similarly to how they function in VR, with
+            controller input being used to interact with the environment. However, we encountered difficulties with the
+            third feature: displaying real objects in the scene. After extensive research, we discovered that the
+            Passthrough API provided by Meta currently only offers coarse-grained control, such as underlaying or
+            overlaying the virtual scene. While real objects like furniture can be scanned using the API, we found that
+            enabling floor or wall texture overlays would directly cover the passthrough video feed. This means that the
+            overlays are not seamlessly integrated into the 3D environment as we initially thought. </p>
+        <p> Fortunately, Quinten Dauwe, a fellow Mixed Reality developer from the <a
+                href="https://discord.gg/v8fVjweUPB">Black
+                Whale Studio's XR Dev Discord</a>, kindly pointed us towards Selective Passthrough. We had previously
+            watched many of the studio's high-quality MR tutorials for the Meta Presence API and joined their Discord
+            channel after attempting to tweak the default passthrough shader without success. With Quinten's guidance,
+            we were able
+            to selectively display scanned furniture in passthrough, although the textures are still overlaid on top of
+            the passthrough feed. </p>
         <h3>Plan for Next Week</h3>
-        <p>
-            In the upcoming week, we plan to focus on developing a practical AR feature:
-            a window that allows users to seamlessly view their backyard or outdoor surroundings from
-            within the virtual space. This feature aims to bridge the gap between the real and virtual
-            worlds by providing users with a simultaneous view of both environments.
-        </p>
-        <p>
-            The introduction of a passthrough window is expected to significantly enhance the user experience and
-            provide a more comprehensive perspective during the interior design process. By incorporating the real
-            outdoor scenery, users can better assess how their interior design choices interact with and complement the
-            exterior view. This holistic approach enables homeowners and designers to make more informed decisions,
-            ensuring that the interior design harmonizes with the surrounding environment.
-        </p>
-        <p>
-            Currently, most 3D renderings created by interior designers rely on artificial or generic outdoor scenery
-            when depicting windows. However, the RemodAR team recognizes that the outside view is often just as crucial
-            as the interior design and should be given more consideration during the planning phase. By leveraging
-            the
-            passthrough window feature, RemodAR aims to provide a more realistic and personalized design experience,
-            setting itself apart from traditional rendering methods.
+        <p> In the upcoming week, we plan to:
+        <ol>
+            <li>Explore Meta's <a
+                    href="https://developer.oculus.com/documentation/unity/unity-mr-utility-kit-overview/">Mixed Reality
+                    Utility Kit</a> (MRUK), which Quinten mentioned.</li>
+            <p>We discovered that this kit not only creates convenient
+                abstractions over the Scene API but also provides ways to test our MR apps in the Unity editor with 30
+                pre-made room prefabs. Over the next week, we will be porting existing logic from the Scene API to the
+                MRUK.
+                We hope that MRUK will offer a better way to mix passthrough with overlay textures.
+            </p>
+            <li>Develop a new passthrough window feature</li>
+            <p>
+                This feature will allow users to seamlessly view their backyard or outdoor
+                surroundings from within the virtual space. It aims to bridge the gap between the real and virtual
+                worlds by providing users with a simultaneous view of both environments.
+            </p>
+            <p>
+                The introduction of a passthrough window is expected to significantly enhance the user experience and
+                provide a more comprehensive perspective during the interior design process. By incorporating the real
+                outdoor scenery, users can better assess how their interior design choices interact with and complement
+                the
+                exterior view. This holistic approach enables homeowners and designers to make more informed decisions,
+                ensuring that the interior design harmonizes with the surrounding environment.
+            </p>
+            <p>
+                Currently, most 3D renderings created by interior designers rely on artificial or generic outdoor
+                scenery
+                when depicting windows. However, the RemodAR team recognizes that the outside view is often just as
+                crucial
+                as the interior design and should be given more consideration during the planning phase. By leveraging
+                the
+                passthrough window feature, RemodAR aims to provide a more realistic and personalized design experience,
+                setting itself apart from traditional rendering methods.
+            </p>
+        </ol>
         </p>
 
         <h3>Milestone 1 (March 25 - 31, 2024)</h3>
