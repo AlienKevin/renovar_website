@@ -5,156 +5,185 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Milestone2</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<head>
+    <title>Milestone2</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html">RemodAR</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="Milestone1.html">Milestone1</a></li>
-											<li><a href="Milestone2.html">Milestone2</a></li>
-											<!-- <li><a href="#">Sign Up</a></li>
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">RemodAR</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="Milestone1.html">Milestone1</a></li>
+                                <li><a href="Milestone2.html">Milestone2</a></li>
+                                <!-- <li><a href="#">Sign Up</a></li>
 											<li><a href="#">Log In</a></li> -->
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-				<!-- Main -->
-					<article id="main">
-						<header>
-							<h2>Milestone2</h2>
-							<p>April 1 - 8, 2024</p>
-						</header>
-						<section class="wrapper style5">
-							<div class="inner">
+        <!-- Main -->
+        <article id="main">
+            <header>
+                <h2>Milestone2</h2>
+                <p>April 1 - 8, 2024</p>
+            </header>
+            <section class="wrapper style5">
+                <div class="inner">
 
-								<h3>New Progress</h3>
-								<p>
-                                    Based on playtest results, we found that users want to be able to
-                                    interact with virtual objects and have them naturally
-                                    coexist with the real objects and environment.
-                                    So this week, we focused on three features to address these needs:
-                                </p>
-                                <ol>
-                                    <li>Changing textures on walls, floors, and ceilings</li>
-                                    <li>Adding objects into the room</li>
-                                    <li>Fusing real-world objects with the virtual environment</li>
-                                </ol>
-                                <figure style="margin: 0; text-align: center;">
-                                    <iframe
-                                        src="https://customer-txd9t6nn5clphx9i.cloudflarestream.com/3a5eade8e5fe2b9b192ec42dcc64759b/iframe?poster=https%3A%2F%2Fcustomer-txd9t6nn5clphx9i.cloudflarestream.com%2F3a5eade8e5fe2b9b192ec42dcc64759b%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
-                                        loading="lazy" style="border: none; width: 80%; max-width: 800px; height: 60vh;"
-                                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                                        allowfullscreen="true"></iframe>
-                                    <figcaption style="margin-top: 10px;">Video Demo of RemodAR on Quest 3</figcaption>
-                                </figure>  
-                                <hr />
+                    <h3>New Progress</h3>
+                    <p>
+                        Based on playtest results, we found that users want to be able to
+                        interact with virtual objects and have them naturally
+                        coexist with the real objects and environment.
+                        So this week, we focused on three features to address these needs:
+                    </p>
+                    <ol>
+                        <li>Changing textures on walls, floors, and ceilings</li>
+                        <li>Adding objects into the room</li>
+                        <li>Fusing real-world objects with the virtual environment</li>
+                    </ol>
+                    <figure style="margin: 0; text-align: center;">
+                        <iframe
+                            src="https://customer-txd9t6nn5clphx9i.cloudflarestream.com/3a5eade8e5fe2b9b192ec42dcc64759b/iframe?poster=https%3A%2F%2Fcustomer-txd9t6nn5clphx9i.cloudflarestream.com%2F3a5eade8e5fe2b9b192ec42dcc64759b%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                            loading="lazy" style="border: none; width: 80%; max-width: 800px; height: 60vh;"
+                            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                            allowfullscreen="true"></iframe>
+                        <figcaption style="margin-top: 10px;">Video Demo of RemodAR on Quest 3</figcaption>
+                    </figure>
+                    <hr />
 
-								<h3>Challenges with Passthrough</h3>
-								<p> The first two features, raycasting and object placement, are relatively straightforward because we can treat
-                                    the scanned room as a virtual environment. These features work similarly to how they function in VR, with
-                                    controller input being used to interact with the environment. However, we encountered difficulties with the
-                                    third feature: displaying real objects in the scene. After extensive research, we discovered that the
-                                    Passthrough API provided by Meta currently only offers coarse-grained control, such as underlaying or
-                                    overlaying the virtual scene. While real objects like furniture can be scanned using the API, we found that
-                                    enabling floor or wall texture overlays would directly cover the passthrough video feed. This means that the
-                                    overlays are not seamlessly integrated into the 3D environment as we initially thought. </p>
+                    <h3>Challenges with Passthrough</h3>
+                    <p> The first two features, raycasting and object placement, are relatively straightforward because
+                        we can treat
+                        the scanned room as a virtual environment. These features work similarly to how they function in
+                        VR, with
+                        controller input being used to interact with the environment. However, we encountered
+                        difficulties with the
+                        third feature: displaying real objects in the scene. After extensive research, we discovered
+                        that the
+                        Passthrough API provided by Meta currently only offers coarse-grained control, such as
+                        underlaying or
+                        overlaying the virtual scene. While real objects like furniture can be scanned using the API, we
+                        found that
+                        enabling floor or wall texture overlays would directly cover the passthrough video feed. This
+                        means that the
+                        overlays are not seamlessly integrated into the 3D environment as we initially thought. </p>
 
-                                <p> Fortunately, Quinten Dauwe, a fellow Mixed Reality developer from the <a
-                                    href="https://discord.gg/v8fVjweUPB">Black
-                                    Whale Studio's XR Dev Discord</a>, kindly pointed us towards Selective Passthrough. We had previously
-                                    watched many of the studio's high-quality MR tutorials for the Meta Presence API and joined their Discord
-                                    channel after attempting to tweak the default passthrough shader without success. With Quinten's guidance,
-                                    we were able
-                                    to selectively display scanned furniture in passthrough, although the textures are still overlaid on top of
-                                    the passthrough feed. </p>
-                                <hr /> 
+                    <p> Fortunately, Quinten Dauwe, a fellow Mixed Reality developer from the <a
+                            href="https://discord.gg/v8fVjweUPB">Black
+                            Whale Studio's XR Dev Discord</a>, kindly pointed us towards Selective Passthrough. We had
+                        previously
+                        watched many of the studio's high-quality MR tutorials for the Meta Presence API and joined
+                        their Discord
+                        channel after attempting to tweak the default passthrough shader without success. With Quinten's
+                        guidance,
+                        we were able
+                        to selectively display scanned furniture in passthrough, although the textures are still
+                        overlaid on top of
+                        the passthrough feed. </p>
+                    <hr />
 
-                                <h3>Plan for Next Week</h3>
-								<p> In the upcoming week, we plan to:
-                                    <ol>
-                                        <li>Explore Meta's <a
-                                                href="https://developer.oculus.com/documentation/unity/unity-mr-utility-kit-overview/">Mixed Reality
-                                                Utility Kit</a> (MRUK), which Quinten mentioned.</li>
-                                        <p>We discovered that this kit not only creates convenient
-                                            abstractions over the Scene API but also provides ways to test our MR apps in the Unity editor with 30
-                                            pre-made room prefabs. Over the next week, we will be porting existing logic from the Scene API to the
-                                            MRUK.
-                                            We hope that MRUK will offer a better way to mix passthrough with overlay textures.
-                                        </p>
-                                        <li>Develop a new passthrough window feature</li>
-                                        <p>
-                                            This feature will allow users to seamlessly view their backyard or outdoor
-                                            surroundings from within the virtual space. It aims to bridge the gap between the real and virtual
-                                            worlds by providing users with a simultaneous view of both environments.
-                                        </p>
-                                        <p>
-                                            The introduction of a passthrough window is expected to significantly enhance the user experience and
-                                            provide a more comprehensive perspective during the interior design process. By incorporating the real
-                                            outdoor scenery, users can better assess how their interior design choices interact with and complement
-                                            the
-                                            exterior view. This holistic approach enables homeowners and designers to make more informed decisions,
-                                            ensuring that the interior design harmonizes with the surrounding environment.
-                                        </p>
-                                        <p>
-                                            Currently, most 3D renderings created by interior designers rely on artificial or generic outdoor
-                                            scenery
-                                            when depicting windows. However, the RemodAR team recognizes that the outside view is often just as
-                                            crucial
-                                            as the interior design and should be given more consideration during the planning phase. By leveraging
-                                            the
-                                            passthrough window feature, RemodAR aims to provide a more realistic and personalized design experience,
-                                            setting itself apart from traditional rendering methods.
-                                        </p>
-                                    </ol>
-                                    </p>                            
-							</div>
-						</section>
-					</article>
+                    <h3>Plan for Next Week</h3>
+                    <p> In the upcoming week, we plan to:
+                    <ol>
+                        <li>Explore Meta's <a
+                                href="https://developer.oculus.com/documentation/unity/unity-mr-utility-kit-overview/">Mixed
+                                Reality
+                                Utility Kit</a> (MRUK), which Quinten mentioned.</li>
+                        <p>We discovered that this kit not only creates convenient
+                            abstractions over the Scene API but also provides ways to test our MR apps in the Unity
+                            editor with 30
+                            pre-made room prefabs. Over the next week, we will be porting existing logic from the Scene
+                            API to the
+                            MRUK.
+                            We hope that MRUK will offer a better way to mix passthrough with overlay textures.
+                        </p>
+                        <li>Develop a new passthrough window feature</li>
+                        <p>
+                            This feature will allow users to seamlessly view their backyard or outdoor
+                            surroundings from within the virtual space. It aims to bridge the gap between the real and
+                            virtual
+                            worlds by providing users with a simultaneous view of both environments.
+                        </p>
+                        <p>
+                            The introduction of a passthrough window is expected to significantly enhance the user
+                            experience and
+                            provide a more comprehensive perspective during the interior design process. By
+                            incorporating the real
+                            outdoor scenery, users can better assess how their interior design choices interact with and
+                            complement
+                            the
+                            exterior view. This holistic approach enables homeowners and designers to make more informed
+                            decisions,
+                            ensuring that the interior design harmonizes with the surrounding environment.
+                        </p>
+                        <p>
+                            Currently, most 3D renderings created by interior designers rely on artificial or generic
+                            outdoor
+                            scenery
+                            when depicting windows. However, the RemodAR team recognizes that the outside view is often
+                            just as
+                            crucial
+                            as the interior design and should be given more consideration during the planning phase. By
+                            leveraging
+                            the
+                            passthrough window feature, RemodAR aims to provide a more realistic and personalized design
+                            experience,
+                            setting itself apart from traditional rendering methods.
+                        </p>
+                    </ol>
+                    </p>
+                </div>
+            </section>
+        </article>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
+        <!-- Footer -->
+        <footer id="footer">
+            <!-- <ul class="icons">
 							<li><a href="https://gitlab.eecs.umich.edu/groups/eecs498-p3" class="icon brands fa-gitlab"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
 							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; RemodAR</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
+						</ul> -->
+            <ul class="copyright">
+                <li>&copy; RemodAR</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </footer>
 
-			</div>
+    </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
-	</body>
+</body>
+
 </html>
