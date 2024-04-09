@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Milestone1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">RemodAR</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="Milestone1.html">Milestone1</a></li>
+											<li><a href="Milestone2.html">Milestone2</a></li>
+											<!-- <li><a href="#">Sign Up</a></li>
+											<li><a href="#">Log In</a></li> -->
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>Milestone1</h2>
+							<p>March 25 - 31, 2024</p>
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+
+								<h3>Choice of Technology</h3>
+								<p>After careful consideration, we chose to develop RemodAR using AR on the Meta Quest 3 headset. AR allows users to experience their unique remodeled space by physically walking through it, providing a more immersive and realistic experience compared to VR, which often relies on fixed viewpoints or awkward teleportation movement. The Meta Quest 3 headset's high-fidelity passthrough and wide field-of-view deliver the level of immersion necessary for visualizing a remodeling project, surpassing the limitations of small mobile device screens.</p>
+                                <hr />
+
+								<h3>Testing the Water</h3>
+								<p>As newcomers to the AR features of the Meta Quest platform, we began by downloading and building a demo game called <a href="https://github.com/oculus-samples/Unity-Phanto">Phanto</a>, provided by Meta, on the Quest Pro. This game showcased several crucial AR features needed for our project, including passthrough, scene recognition, and object placement. Although we successfully compiled and ran the game on the Quest Pro, we discovered that it does not support the scene mesh API required for room scanning, scene recognition, and object placement. Moreover, the passthrough quality was unstable, grainy, and lacked color. These limitations made it clear that the Quest Pro could not deliver the immersive AR experience required forRemodAR. As a result, we decided to purchase a Quest 3 to further explore its potential for our project. The Quest 3 exceeded our expectations. The Phanto game worked seamlessly on the Quest 3, and we were impressed by the high precision of its room scanning capability. The device allowed us to place virtual weapons on any physical surface with remarkable accuracy, and the enemies spawned at realistic, unoccupied locations within the room, enhancing the overall immersive experience.</p>
+                                <figure style="margin: 0; text-align: center;">
+                                    <iframe
+                                        src="https://customer-txd9t6nn5clphx9i.cloudflarestream.com/436d00c4083777bb02b3864469ac687c/iframe?poster=https%3A%2F%2Fcustomer-txd9t6nn5clphx9i.cloudflarestream.com%2F436d00c4083777bb02b3864469ac687c%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                                        loading="lazy" style="border: none; width: 80%; max-width: 800px; height: 60vh;"
+                                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                                        allowfullscreen="true"></iframe>
+                                    <figcaption style="margin-top: 10px;">Video Demo of the Phanto game on Quest 3</figcaption>
+                                </figure>  
+                                <hr />    
+
+                                <h3>First Proof-of-Concept</h3>
+								<p>Encouraged by the Quest 3's capabilities demonstrated in the Phanto game, we proceeded to follow the first part of a <a href="https://www.youtube.com/watch?v=b_1Xby35fSo">Meta Quest Scene API YouTube tutorial</a> to implement the most basic features of home remodeling: changing floor tiles and painting walls. This initial proof-of-concept allowed us to lay the foundation for our RemodAR application. The demo video below was filmed in an occupied room with furniture but we intend the experience to be taken place in a new, empty, unfurnished room where the customer can walk around more freely. In the coming week, we plan to expand on this by enabling users to select from a variety of floor tiles and wallpapers, as well as experiment with adding furniture to the virtual room.</p>
+                                <figure style="margin: 0; text-align: center;">
+                                    <iframe
+                                        src="https://customer-txd9t6nn5clphx9i.cloudflarestream.com/d96ccd9000bd107d560376fde2c461b8/iframe?poster=https%3A%2F%2Fcustomer-txd9t6nn5clphx9i.cloudflarestream.com%2Fd96ccd9000bd107d560376fde2c461b8%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                                        loading="lazy" style="border: none; width: 80%; max-width: 800px; height: 60vh;"
+                                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                                        allowfullscreen="true"></iframe>
+                                    <figcaption style="margin-top: 10px;">Video Demo of Milestone 1 on Quest 3</figcaption>
+                                </figure>                                
+							</div>
+						</section>
+					</article>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="https://gitlab.eecs.umich.edu/groups/eecs498-p3" class="icon brands fa-gitlab"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; RemodAR</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
