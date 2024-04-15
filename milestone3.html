@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Milestone3</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">RenovAR</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="milestone1.html">Milestone1</a></li>
+                                <li><a href="milestone2.html">Milestone2</a></li>
+                                <li><a href="milestone3.html">Milestone3</a></li>
+                                <!-- <li><a href="#">Sign Up</a></li>
+											<li><a href="#">Log In</a></li> -->
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <article id="main">
+            <header>
+                <h2>Milestone3</h2>
+                <p>April 8 - 15, 2024</p>
+            </header>
+            <section class="wrapper style5">
+                <div class="inner">
+
+                    <h3>Better Controls and Passthrough Window</h3>
+                    <p>
+                        Users consistently asked for more intuitive controls so after implementing the core
+                        features, we introduced a menu for selecting objects. Users can see which object they
+                        have currently selected and see 8 other objects in a convenient grid.
+
+                        Based on Studio 5's playtest feedback, we added the ability to rotate objects using the right
+                        hand trigger. This gives more flexibility to the users when placing objects in their room. We
+                        also fixed a bug discovered during that same playtesting session where the right index trigger
+                        sometimes malfunctions. We had trouble fixing this bug at first because it cannot be reproduced
+                        consistently. After extensive research, we found a <a
+                            href="https://forum.unity.com/threads/ovrinput-button-secondaryhandtrigger-not-working-correctly.749048/#post-5333142">Unity
+                            forum post</a> that had the exact same
+                        problem as us. It turns out that when the controllers don't move for a period of
+                        time or no buttons are pressed they are deactivated. SecondaryIndexTrigger then can become
+                        PrimaryIndexTrigger from one frame to another and vice versa. We had to set the button to
+                        RawButton.RIndexTrigger to fix this bug.
+
+                        We also implemented the passthrough window planned last week. Coupled with improvements to
+                        the passthrough shader, the window feature lit up the room and made the environment more
+                        realistic
+                        and immersive.
+                    </p>
+                    <figure style="margin: 0; text-align: center;">
+                        <iframe
+                            src="https://customer-txd9t6nn5clphx9i.cloudflarestream.com/6d3a60d9acd197b777c445b77986f92b/iframe?poster=https%3A%2F%2Fcustomer-txd9t6nn5clphx9i.cloudflarestream.com%2F6d3a60d9acd197b777c445b77986f92b%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+                            loading="lazy" style="border: none; width: 80%; max-width: 800px; height: 60vh;"
+                            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                            allowfullscreen="true"></iframe>
+                        <figcaption style="margin-top: 10px;">Video Demo of Key Changes of Milestone 3 on Quest 3
+                        </figcaption>
+                    </figure>
+                    <hr />
+
+                    <h3>Rebranding and Change of Business Plan</h3>
+                    <p>
+                        Based on instructor's feedback about the scope of this project, we decided to rebrand as RenovAR
+                        instead of
+                        RemodAR. We think that renovation is a better term to describe the purpose of our project while
+                        remodelling
+                        , like breaking down walls etc, is very hard to achieve in current AR. While it's possible to
+                        break down walls
+                        and allow the user to peak into the room behind the wall, the user still cannot physically walk
+                        through the gap
+                        because we only destructed the wall virtually.
+
+                        We reconsidered our current subscription-based business plan
+                        and decided to switch to posit ourselves as the next digital marketplace for renovation.
+                        Since we are not making furniture and paint, it is natural to host products from existing
+                        companies that make these products. Brands like IKEA and Amazon will have the incentive to
+                        display
+                        their products on our marketplace because it's a low-stake way to experiment with cutting-edge
+                        passthrough AR
+                        tech that complements the existing mobile AR solutions they have in-house. Customers would want
+                        to shop on
+                        our platforms because we offer much wider range of selections than other AR renovation apps like
+                        Housecraft, which
+                        has less than 40 low-fidelity toy furniture models.
+                    </p>
+
+                    <h3>Plan for Next Week</h3>
+                    <p> In the upcoming week, we plan to
+                    <ol>
+                        <li>Continue to refine the controls by introducing a way to delete objects</li>
+                        <li>Show progressive hints on how to use the controller as the user try out new features</li>
+                        <li>Add more objects to place on
+                            the walls and ceilings.</li>
+                    </ol>
+                    </p>
+                </div>
+            </section>
+        </article>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <!-- <ul class="icons">
+							<li><a href="https://gitlab.eecs.umich.edu/groups/eecs498-p3" class="icon brands fa-gitlab"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul> -->
+            <ul class="copyright">
+                <li>&copy; RenovAR</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
