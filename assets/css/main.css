@@ -3784,12 +3784,16 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#cta .inner {
-				display: block;
-				text-align: center;
+				display: flex;
+				flex-direction: column; /* 以列方式堆叠元素 */
+				align-items: center; /* 水平居中 */
+				max-width: 60em; /* 可以根据实际情况调整 */
+				margin: auto; /* 水平居中整个inner容器 */
 			}
 
 				#cta .inner header {
-					padding-right: 0;
+					text-align: center; /* 文本居中 */
+    				margin-bottom: 2em; /* 头部与下方内容的间隔 */
 					width: 100%;
 				}
 

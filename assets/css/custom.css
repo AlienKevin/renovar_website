@@ -6,3 +6,38 @@ ul.bullets li {
 .wrapper.style1 header.major p {
     color: white;
 }
+
+
+.team-member {
+    flex-basis: 20%; /* Adjust this percentage to increase/decrease the width of each member */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em; /* Provides some space around each team member */
+}
+
+.team-member img {
+    border-radius: 50%; /* Makes the image circular */
+    width: 150px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures the image covers the area */
+    border: 3px solid #fff; /* Optional: adds a border around the image */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a slight shadow for depth */
+}
+
+.team-member h3 {
+    margin-top: 1em;
+    color: #333; /* Adjust color as needed */
+    font-size: 0.8em; /* Adjust font size as needed */
+}
+
+.team-member a {
+    color: #ffffff; /* Adjust link color as needed */
+    text-decoration: none; /* Removes underline from links */
+    font-weight: bold; /* Makes the portfolio link bold */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.team-member a:hover {
+    color: #ffd700; /* Darker shade on hover, adjust color as needed */
+}
