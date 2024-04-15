@@ -46,81 +46,74 @@
         <!-- Main -->
         <article id="main">
             <header>
-                <h2>Milestone3</h2>
+                <h2>Milestone 3</h2>
                 <p>April 8 - 15, 2024</p>
             </header>
             <section class="wrapper style5">
                 <div class="inner">
+                    <h3>Intuitive Controls and Enhanced Passthrough</h3>
 
-                    <h3>Better Controls and Passthrough Window</h3>
-                    <p>
-                        Users consistently asked for more intuitive controls so after implementing the core
-                        features, we introduced a menu for selecting objects. Users can see which object they
-                        have currently selected and see 8 other objects in a convenient grid.
+                    <p>In response to user feedback requesting more intuitive controls, we introduced an object
+                        selection menu after implementing the core features. This menu allows users to easily see their
+                        currently selected object and choose from 8 other objects in a convenient grid layout.</p>
 
-                        Based on Studio 5's playtest feedback, we added the ability to rotate objects using the right
-                        hand trigger. This gives more flexibility to the users when placing objects in their room. We
-                        also fixed a bug discovered during that same playtesting session where the right index trigger
-                        sometimes malfunctions. We had trouble fixing this bug at first because it cannot be reproduced
-                        consistently. After extensive research, we found a <a
+                    <p>We now support rotating objects using the right hand trigger, based on feedback from
+                        last week's playtest session with Studio 5. This provides users with greater flexibility when
+                        placing objects
+                        in their space. During that same playtesting, we uncovered a bug where the right index
+                        trigger would sometimes malfunction. The inconsistent reproduction of this issue made it
+                        challenging to resolve initially. Digging deeper, a <a
                             href="https://forum.unity.com/threads/ovrinput-button-secondaryhandtrigger-not-working-correctly.749048/#post-5333142">Unity
-                            forum post</a> that had the exact same
-                        problem as us. It turns out that when the controllers don't move for a period of
-                        time or no buttons are pressed they are deactivated. SecondaryIndexTrigger then can become
-                        PrimaryIndexTrigger from one frame to another and vice versa. We had to set the button to
-                        RawButton.RIndexTrigger to fix this bug.
+                            forum post</a> shed light on the root cause: controller deactivation due to inactivity
+                        causes
+                        the PrimaryIndexTrigger to switch to the left hand.
+                        Setting the button to RawButton.RIndexTrigger fixed the bug.</p>
 
-                        We also implemented the passthrough window planned last week. Coupled with improvements to
-                        the passthrough shader, the window feature lit up the room and made the environment more
-                        realistic
-                        and immersive.
-                    </p>
+                    <p>Another key addition was the passthrough window, as planned last week. Paired with enhancements
+                        to the passthrough shader, this feature significantly brightened up the room, resulting in a
+                        more realistic and immersive environment.</p>
+
                     <figure style="margin: 0; text-align: center;">
                         <iframe
                             src="https://customer-txd9t6nn5clphx9i.cloudflarestream.com/6d3a60d9acd197b777c445b77986f92b/iframe?poster=https%3A%2F%2Fcustomer-txd9t6nn5clphx9i.cloudflarestream.com%2F6d3a60d9acd197b777c445b77986f92b%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
                             loading="lazy" style="border: none; width: 80%; max-width: 800px; height: 60vh;"
                             allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
                             allowfullscreen="true"></iframe>
-                        <figcaption style="margin-top: 10px;">Video Demo of Key Changes of Milestone 3 on Quest 3
+                        <figcaption style="margin-top: 10px;">Video Demo of Key Changes in Milestone 3 on Quest 3
                         </figcaption>
                     </figure>
+
                     <hr />
 
-                    <h3>Rebranding and Change of Business Plan</h3>
-                    <p>
-                        Based on instructor's feedback about the scope of this project, we decided to rebrand as RenovAR
-                        instead of
-                        RemodAR. We think that renovation is a better term to describe the purpose of our project while
-                        remodelling
-                        , like breaking down walls etc, is very hard to achieve in current AR. While it's possible to
-                        break down walls
-                        and allow the user to peak into the room behind the wall, the user still cannot physically walk
-                        through the gap
-                        because we only destructed the wall virtually.
+                    <h3>RenovAR: Rebranding and Pivoting Business Strategy</h3>
+                    <p>Taking the instructor's feedback about project scope into consideration, we decided to rebrand as
+                        RenovAR instead of RemodAR. The term "renovation" better aligns with our project's purpose, as
+                        "remodeling" often involves more extensive changes like breaking down walls, which are currently
+                        challenging to achieve realistically in AR.</p>
 
-                        We reconsidered our current subscription-based business plan
-                        and decided to switch to posit ourselves as the next digital marketplace for renovation.
-                        Since we are not making furniture and paint, it is natural to host products from existing
-                        companies that make these products. Brands like IKEA and Amazon will have the incentive to
-                        display
-                        their products on our marketplace because it's a low-stake way to experiment with cutting-edge
-                        passthrough AR
-                        tech that complements the existing mobile AR solutions they have in-house. Customers would want
-                        to shop on
-                        our platforms because we offer much wider range of selections than other AR renovation apps like
-                        Housecraft, which
-                        has less than 40 low-fidelity toy furniture models.
+                    <p>We also reevaluated our subscription-based business model and pivoted to position ourselves as
+                        the leading digital marketplace for renovation. Partnering with established brands like IKEA and
+                        Amazon to host their products on our platform is a natural fit, as we aren't manufacturing
+                        furniture or paint ourselves. Joining forces with industry leaders like IKEA and Amazon to
+                        showcase their products on our platform benefits all parties involved. For these companies,
+                        RenovAR presents a unique opportunity to explore the potential of cutting-edge passthrough AR
+                        tech without significant investment, serving as a valuable complement to their existing
+                        in-house mobile AR solutions. This partnership also opens up the possibility of integrating our
+                        product into one of these established brands, increasing our long-term viability in the market.
+                        Most importantly, customers will be drawn to our platform's vast selection, far surpassing other
+                        AR renovation apps like Housecraft, which offers fewer than 40 low-fidelity furniture
+                        models.
                     </p>
 
-                    <h3>Plan for Next Week</h3>
-                    <p> In the upcoming week, we plan to
+                    <h3>Next Steps</h3>
+                    <p>In the coming week, we plan to:
                     <ol>
-                        <li>Continue to refine the controls by introducing a way to delete objects</li>
-                        <li>Show progressive hints on how to use the controller as the user try out new features</li>
-                        <li>Add more objects to place on
-                            the walls and ceilings.</li>
+                        <li>Further refine controls by introducing object deletion functionality</li>
+                        <li>Implement progressive hints to guide users as they explore new features</li>
+                        <li>Expand the object library to include more items for walls and ceilings</li>
                     </ol>
                     </p>
+
                 </div>
             </section>
         </article>
